@@ -3,11 +3,10 @@ class Solution {
         int answer = 0;
         //양의정수 a,b  ab = 2*a*b -> ab return
         
-        String cul = ""+a+b;
-        int intCul = Integer.parseInt(cul);
+       int cul = Integer.parseInt(""+a+b);
         
-        if(intCul >= 2*a*b){
-            return intCul;
+        if(cul >= 2*a*b){
+            return cul;
         }
         
         
