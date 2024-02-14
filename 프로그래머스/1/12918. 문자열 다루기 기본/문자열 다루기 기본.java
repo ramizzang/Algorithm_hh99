@@ -1,16 +1,16 @@
 class Solution {
-    public static boolean solution(String s) {
-        boolean answer = true;
-        
-        if(s.length() == 4 || s.length() == 6){
-            for(int i=0; i<s.length(); i++){
-                if(!('0'<= s.charAt(i) && s.charAt(i) <= '9') ){
-                   return false;
-                }
-            }
-        }else{
-           return false;
+    public boolean solution(String str) {
+        int len = str.length();
+        if(!(len == 4 || len == 6)) {
+            return false;
         }
-        return answer;
+//        s는 영문 알파벳 대소문자 또는 0부터 9까지 숫자로 이루어져 있습니다
+        for(char ch : str.toCharArray()){
+            System.out.println(ch);
+            if('a'<=ch && ch<='z' || 'A'<=ch && ch<='Z'){
+                return false;
+            }
+        }
+        return true;
     }
 }
