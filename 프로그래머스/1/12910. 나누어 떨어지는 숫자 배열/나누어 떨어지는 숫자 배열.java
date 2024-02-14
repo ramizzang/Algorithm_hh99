@@ -1,32 +1,27 @@
 import java.util.*;
 class Solution {
-    public int[] solution(int[] arr, int divisor) {
-        int answer[];
-        int arrLength = 0;
-        
-        //arr을 divisor 을 나누어서 오름차순 정렬        
-        for(int i : arr){
-            if(i%divisor == 0){
-                arrLength++;                
-            }
-        }
+    public List<Integer> solution(int[] arr, int divisor) {
+        List<Integer> result = new ArrayList<>();
 
-        
-        if(arrLength == 0){
-            answer = new int[]{-1};
-        }else{
-            answer = new int[arrLength];
-            int index = 0;
-            for(int i : arr){
-                if(i % divisor == 0){
-                    answer[index++] = i;
-                }
+        //arr length 만큼 반복
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % divisor == 0) {
+                result.add(arr[i]);
             }
-            //정렬
-            Arrays.sort(answer);
         }
-        
-        
-        return answer;
+        /* 향상된 for 문으로 변경
+        for (int num : arr) {
+            if (num % divisor == 0) {
+                result.add(num);
+            }
+        }
+        */
+        if (result.isEmpty()) { // list가 비어있다면
+            result.add(-1);
+        } else {
+            Collections.sort(result);
+        }
+     return result;
     }
+    
 }
