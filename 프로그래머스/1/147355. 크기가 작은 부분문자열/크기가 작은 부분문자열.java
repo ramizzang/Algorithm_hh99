@@ -1,21 +1,13 @@
-class Solution {
-    public int solution(String t, String p) {
+class Solution
+{
+    public int solution(String t, String p)
+    {
         int answer = 0;
-        int lenT = t.length();
-        int lenP = p.length();
-        
-        long targetNum = Long.parseLong(p);
-        
-        for(int i=0; i<= lenT - lenP; i++){
-            String subStr = t.substring(i, i+lenP);
-                System.out.println(subStr);
-            long subNum = Long.parseLong(subStr);
-            
-            if(subNum <= targetNum){
+
+        for(int i=0; i<=t.length()-p.length(); i++)
+            if(Long.parseLong(t.substring(i, i+p.length())) <= Long.parseLong(p))
                 answer++;
-            }
-        }
-               
+
         return answer;
     }
 }
