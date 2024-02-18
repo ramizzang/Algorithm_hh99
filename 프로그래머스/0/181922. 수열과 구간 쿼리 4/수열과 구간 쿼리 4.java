@@ -16,7 +16,7 @@ class Solution {
             // 0은 모든 수의 배수 i%k == 0 -> arr[i]++;
             
             for(int i=s; i<=e; i++){  
-                if(i==0 || i%k ==0){
+                if(i%k ==0){
                     arr[i]++;
                     
                 }
