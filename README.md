@@ -1,2 +1,2 @@
-# Algorithm_hh99
+# Algoritm_hh99
 This is an auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
