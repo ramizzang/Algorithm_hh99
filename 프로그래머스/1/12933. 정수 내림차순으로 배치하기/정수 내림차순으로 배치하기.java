@@ -1,19 +1,23 @@
-import java.util.*;
+import java.util.Arrays;
+
 class Solution {
     public static long solution(long n){
-        // 각 자릿수를 배열 or list에 저장
-        // 방법 1. Strtin 으로 변환 후 정렬 한 뒤 더하기
-        // 방법 2. list or 배열에 저장 한뒤 collections를 사용 or for문을 사용하여 뒤에서부터 저장해주기
-        long answer = 0;
-        String result="";
-        //1. long 을 스트링으로 변환 하여 배열로 저장
+        // 각 자릿수를 배열에 저장하고 직접 정렬하여 결과 계산
         String[] strNum = String.valueOf(n).split("");
-        Arrays.sort(strNum);
-        for(int i=strNum.length-1; i>=0; i--){
-            result += strNum[i];
+        int len = strNum.length;
+        int[] intArray = new int[len];
+
+        for (int i = 0; i < len; i++) {
+            intArray[i] = Integer.parseInt(strNum[i]);
         }
 
+        Arrays.sort(intArray);
 
-        return Long.parseLong(result);
+        long answer = 0;
+        for (int i = len - 1; i >= 0; i--) {
+            answer = answer * 10 + intArray[i];
+        }
+
+        return answer;
     }
 }
