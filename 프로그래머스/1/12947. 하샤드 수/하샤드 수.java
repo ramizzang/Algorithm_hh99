@@ -7,6 +7,6 @@ class Solution {
             x /= 10;
         }
         
-        return originX % sum == 0;
+        return originX % sum == 0 ? true : false;
     }
 }
