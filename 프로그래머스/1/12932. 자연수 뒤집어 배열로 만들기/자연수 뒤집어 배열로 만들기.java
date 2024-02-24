@@ -1,15 +1,11 @@
-import java.util.*;
 class Solution {
     public int[] solution(long n) {
-        String[] strNum = String.valueOf(n).split("");
-        int[] answer = new int[strNum.length];
-        int index = 0;
-        for(String str : strNum){
-            answer[index++] = Integer.parseInt(str);
+        String str = "" + n;
+        int[] answer = new int[str.length()];
+        for(int i =0; i<str.length(); i++){
+            answer[i] = (int)(n%10);
+            n = n/10;
         }
-        Arrays.sort(answer,collection.revers());
-        System.out.println(Arrays.toString(answer));
-        
         return answer;
     }
 }
