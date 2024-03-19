@@ -16,20 +16,16 @@ class Solution {
             }
         }
         */
-        
         if (result.isEmpty()) { // list가 비어있다면
-            return new int[]{-1};
-            
-        } else { // int[] 배열에 넣어주기
-            
-        int[] resultArr = new int[result.size()];
-            
-            for(int i = 0; i<result.size(); i++){
-                resultArr[i] = result.get(i);
+            int[] answer = {-1};
+           return answer;
+        } else { // 배열에 리스트 넣어주기
+            int[] answer = new int[result.size()];
+            for(int i=0; i<result.size(); i++){
+                answer[i] = result.get(i);
             }
-        Arrays.sort(resultArr);
-        return resultArr;  
+            Arrays.sort(answer);
+            return answer;
         }
     }
-    
 }
