@@ -1,6 +1,4 @@
-a, b = input().split()
-x = int(a)
-y = int(b)
+x, y = map(int, input().split())
 print(x+y)
 print(x-y)
 print(x*y)
